@@ -1,0 +1,201 @@
+/* 基本リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow-x: hidden;
+  }
+  
+  /* ヘッダー */
+  header {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #764ba2;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #764ba2;
+  }
+  
+  /* ハンバーガーメニュー */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin-bottom: 4px;
+    border-radius: 5px;
+  }
+  
+  /* Hero セクション */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px; /* ヘッダー分の余白 */
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    padding: 0 1rem;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    display: block;
+  }
+  
+  /* About セクション */
+  .about {
+    background: #fff;
+    padding: 4rem 1rem;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-text h2 {
+    color: #764ba2;
+    margin-bottom: 1rem;
+  }
+  
+  .skills {
+    margin-top: 1.5rem;
+  }
+  
+  .skill-tag {
+    display: inline-block;
+    background: #f3f3f3;
+    color: #333;
+    padding: 0.3rem 0.8rem;
+    margin: 0.3rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* ビジュアルカード */
+  .about-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .visual-card {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .visual-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* ===== スマホ対応（768px以下） ===== */
+  @media (max-width: 768px) {
+    /* ナビメニューを隠す */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: white;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 1rem 0;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  
+    /* About セクションを縦並びに */
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-visual {
+      justify-content: center;
+    }
+  
+    .profile-image {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  

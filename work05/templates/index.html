@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上野 広歩生 - プロフィール</title>
+    <!-- 外部CSSを読み込む -->
+    <link rel="stylesheet" href="{% static 'work05/css/style.css' %}">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">{{name}}</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="{% static 'work05/images/IMG_4722.jpg' %}" alt="上野 広歩生" class="profile-image">
+            <h1>{{name}}</h1>
+            <p>情報系学生 / フロントエンドエンジニア志望</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>こんにちは！私は上野 広歩生です。現在はKDGの一年です。授業や独学で学んだ知識を活かし、ポートフォリオ制作や小規模なアプリ開発に取り組んでいます。</p>
+                    <div class="skills">
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-card">🐈</div>
+                    <div class="visual-card">🐈</div>
+                    <div class="visual-card">🐈</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
