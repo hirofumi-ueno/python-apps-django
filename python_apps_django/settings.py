@@ -82,14 +82,24 @@ WSGI_APPLICATION = 'python_apps_django.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+# 環境変数から接続情報を取得する
+DATABASE_HOST = os.environ.get("DB_HOST")
+DATABASE_NAME = os.environ.get("DB_NAME")
+DATABASE_USER = os.environ.get("DB_USER")
+DATABASE_PASSWORD = os.environ.get("DB_PASSWORD")
+DATABASE_PORT = os.environ.get("DB_PORT") or "3306"
 
+# データベース接続設定
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": DATABASE_NAME,
+        "USER": DATABASE_USER,
+        "PASSWORD": DATABASE_PASSWORD,
+        "HOST": DATABASE_HOST,
+        "PORT": DATABASE_PORT,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
